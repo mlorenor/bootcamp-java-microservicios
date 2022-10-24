@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mlorenor/bootcamp-java-microservicios.git
+        default-label: master #nombre de la rama en git
+        search-paths:
+        - '*service*' #subdirectorios donde buscar el fichero de configuracion
+  eureka:
+    client:
+      service-url:
+        defaultZone: http//localhost:8761/eureka/ 
