@@ -1,0 +1,13 @@
+#pares clave valor
+spring:
+  application:
+  name: eureka-server #nombre de la aplicacion
+server:
+  port: 8761
+eureka:
+  client:
+  #telling the server not to register himself in the service registry (que no se registre como microservicio)
+  registerWithEureka: false
+  fetchRegistry: false
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka	
